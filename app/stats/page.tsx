@@ -34,7 +34,9 @@ export default async function StatsPage({
           >
             Home
           </Link>
-          <h1 className="text-3xl font-semibold tracking-tight">Fortnite stats</h1>
+          <h1 className="text-3xl font-semibold tracking-tight">
+            Fortnite stats
+          </h1>
           <p className="max-w-xl text-zinc-600 dark:text-zinc-400">
             Enter an Epic, PlayStation, or Xbox username to load Battle Royale
             stats.
@@ -56,7 +58,7 @@ export default async function StatsPage({
               defaultValue={query.username}
               required
               maxLength={32}
-              placeholder="Ninja"
+              placeholder="SatchM03_CB"
               autoComplete="off"
               className="h-11 rounded-xl border border-black/10 bg-transparent px-3 text-base outline-none focus:border-zinc-400 dark:border-white/15 dark:focus:border-zinc-500"
             />
@@ -119,7 +121,9 @@ export default async function StatsPage({
           <Suspense
             key={`results-${queryKey(query)}`}
             fallback={
-              <p className="text-sm text-zinc-500">Looking up {query.username}…</p>
+              <p className="text-sm text-zinc-500">
+                Looking up {query.username}…
+              </p>
             }
           >
             <StatsResults query={query} />
